@@ -1,0 +1,34 @@
+{
+  "name": "git-tree",
+  "version": "0.1.0",
+  "description": "Stream the content of a git tree object by shelling out to git-ls-tree(1)",
+  "main": "index.js",
+  "dependencies": {
+    "git-spawned-stream": "~0.1.0",
+    "split-transform-stream": "~0.1.1"
+  },
+  "devDependencies": {
+    "proxyquire": "~1.0.0",
+    "should": "~3.3.2",
+    "mocha": "~1.19.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alessioalex/git-tree"
+  },
+  "keywords": [
+    "git",
+    "tree",
+    "stream",
+    "git-tree"
+  ],
+  "author": "Alexandru Vladutu <alexandru.vladutu@gmail.com> (http://careers.stackoverflow.com/alessioalex)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alessioalex/git-tree/issues"
+  },
+  "homepage": "https://github.com/alessioalex/git-tree"
+}
