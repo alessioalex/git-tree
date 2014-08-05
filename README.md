@@ -1,6 +1,7 @@
 # git-tree
 
 Stream the content of a git tree object by shelling out to [git-ls-tree(1)](https://www.kernel.org/pub/software/scm/git/docs/git-ls-tree.html).
+[![build status](https://secure.travis-ci.org/alessioalex/git-tree.png)](http://travis-ci.org/alessioalex/git-tree)
 
 ## Usage
 

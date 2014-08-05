@@ -10,7 +10,7 @@ var tree = {
   submodules: []
 };
 
-streamTreeItems(repoPath).on('data', function(item) {
+streamTreeItems(repoPath, { all: true }).on('data', function(item) {
   var type;
 
   if (item.type === 'blob') {
