@@ -40,7 +40,7 @@ describe('git-tree', function() {
   it('should create the command correctly', function(done) {
     var repoPath = '/home/node.git';
     var opts = {
-      all: true,
+      recursive: true,
       path: '/test',
       rev: 'master'
     };

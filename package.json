@@ -13,7 +13,7 @@
     "mocha": "~1.19.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",

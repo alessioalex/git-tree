@@ -10,7 +10,9 @@ var tree = {
   submodules: []
 };
 
-streamTreeItems(repoPath, { all: true }).on('data', function(item) {
+streamTreeItems(repoPath, {
+  recursive: true
+}).on('data', function(item) {
   var type;
 
   if (item.type === 'blob') {
@@ -26,7 +28,5 @@ streamTreeItems(repoPath, { all: true }).on('data', function(item) {
 }).on('error', function(err) {
   throw err;
 }).on('end', function() {
-  console.log(JSON.stringify(tree));
-  // console.log("\n==================");
-  // console.log("That's all, folks!");
+  console.log(tree);
 });
