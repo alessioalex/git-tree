@@ -22,74 +22,57 @@ var streamTreeItems = require('git-tree');
 var path = require('path');
 var repoPath = path.resolve(process.env.REPO || (__dirname + '/.git'));
 
-var tree = {
-  files: [],
-  folders: [],
-  submodules: []
-};
+streamTreeItems(repoPath, {
+  // recursive: true
+}).on('data', function(item) {
+  item.symlink = (item.mode === '120000') ? true : false;
 
-// show all files in the root of the git repo, HEAD revision
-streamTreeItems(repoPath).on('data', function(item) {
-  var type;
-
-  if (item.type === 'blob') {
-    type = 'files';
-  } else if (item.type === 'tree') {
-    type = 'folders';
-  } else if (item.type === 'submodule') {
-    type = 'submodules';
-  }
-
-  delete item.type;
-  tree[type].push(item);
+  console.log(item);
+  console.log('------');
 }).on('error', function(err) {
   throw err;
 }).on('end', function() {
-  console.log(tree);
-  console.log("\n==================");
-  console.log("That's all, folks!");
+  console.log('That\'s all folks!');
 });
-```
 
-Output:
-
-```js
-{
-  "files": [
-    {
-      "mode": "100644",
-      "hash": "bc96284375bd0c48781c96b45d81d87068e7d5e5",
-      "size": 508,
-      "path": ".gitignore"
-    }, {
-      "mode": "100644",
-      "hash": "5a199dd569f1412adbe273a3789969fcfc04b123",
-      "size": 78,
-      "path": ".gitmodules"
-    }
-  ],
-  "folders": [
-    {
-      "mode": "040000",
-      "hash": "6003a3fe411e6edf6bc1f3e8ad85e3e5802ca893",
-      "size": "-",
-      "path": "actionmailer"
-    }, {
-      "mode": "040000",
-      "hash": "46aa09b6349846238f2d05ab61aa32e4e4b9f47b",
-      "size": "-",
-      "path": "actionpack"
-    }
-  ],
-  "submodules": [
-    {
-      "mode": "160000",
-      "hash": "c67be4624545b4263184c4a0e8f887efd0a66320",
-      "size": "-",
-      "path": "rack"
-    }
-  ]
-}
+/*
+{ type: 'blob',
+  mode: '100644',
+  hash: 'b67a8a8e96c8b4d4e5715be032c0f7e88c49feee',
+  size: 108,
+  path: '.gitmodules',
+  symlink: false }
+------
+{ type: 'blob',
+  mode: '120000',
+  hash: '054d92957a328df28686861eac65abc79c65c319',
+  size: 24,
+  path: 'CONTRIBUTING.md',
+  symlink: true }
+------
+{ type: 'tree',
+  mode: '040000',
+  hash: '3d474da4fd016ec61ff32d8fde505a53d123fed0',
+  size: '-',
+  path: 'folder',
+  symlink: false }
+------
+{ type: 'blob',
+  mode: '120000',
+  hash: 'a0b256310c2b4fb225709c432cad6b9c28dc9a90',
+  size: 37,
+  path: 'sample-folder',
+  symlink: true }
+------
+{ type: 'commit',
+  mode: '160000',
+  hash: '10054733bf311044fb68aec24fe2fac6b21bde36',
+  size: '-',
+  path: 'tiny-each-async',
+  symlink: false }
+------
+That's all folks!
+*/
 ```
 
 ## Tests
