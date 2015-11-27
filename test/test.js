@@ -1,4 +1,5 @@
-"use strict";
+/* eslint-disable no-console, func-names */
+'use strict';
 
 require('should');
 var proxyquire = require('proxyquire');
@@ -18,9 +19,7 @@ describe('git-tree', function() {
       throw err;
     }).on('end', function() {
       items.should.eql(require(__dirname + '/output.json'));
-      // console.log(items);
-      // console.log('-------------------');
-      // console.log(require(__dirname + '/output.json'));
+
       done();
     });
   });
@@ -39,7 +38,7 @@ describe('git-tree', function() {
       },
       'git-spawned-stream': function(path, args) {
         path.should.eql(repoPath);
-        args.should.eql(["ls-tree", "-z", "-l", "-r", opts.rev, "--", opts.path]);
+        args.should.eql(['ls-tree', '-z', '-l', '-r', opts.rev, '--', opts.path]);
 
         return 'git-spawned-stream';
       }

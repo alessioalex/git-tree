@@ -1,12 +1,12 @@
-"use strict";
+'use strict';
 
 var gitSpawnedStream = require('git-spawned-stream');
 var streamingParser = require('./lib/parser');
 
-function listTree(repoPath, opts) {
-  opts = opts || {};
+function listTree(repoPath, ops) {
+  var opts = ops || {};
 
-  var args = ["ls-tree", "-z", "-l"];
+  var args = ['ls-tree', '-z', '-l'];
 
   if (opts.recursive) { args.push('-r'); }
   args.push((opts.rev || 'HEAD'), '--', (opts.path || ''));
