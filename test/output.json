@@ -1,151 +1,37 @@
-{
-  "files": [
-    {
-      "mode": "100644",
-      "hash": "bc96284375bd0c48781c96b45d81d87068e7d5e5",
-      "size": 508,
-      "path": ".gitignore"
-    }, {
-      "mode": "100644",
-      "hash": "5a199dd569f1412adbe273a3789969fcfc04b123",
-      "size": 78,
-      "path": ".gitmodules"
-    }, {
-      "mode": "100644",
-      "hash": "e5aaf57f930da2fea41964bec1141f4a92407086",
-      "size": 918,
-      "path": ".travis.yml"
-    }, {
-      "mode": "100644",
-      "hash": "25ec38658f55c94e9b917b5418c90137be81fbef",
-      "size": 68,
-      "path": ".yardopts"
-    }, {
-      "mode": "100644",
-      "hash": "19b7b638b695ac976c22f9fc745ba9222d45cc53",
-      "size": 1203,
-      "path": "CONTRIBUTING.md"
-    }, {
-      "mode": "100644",
-      "hash": "43efc925d98124c2fef47afc777edd4eaa8948d7",
-      "size": 2674,
-      "path": "Gemfile"
-    }, {
-      "mode": "100644",
-      "hash": "c3577efe53f36cb5cbfa6d3bc878c2038f73247d",
-      "size": 4029,
-      "path": "README.md"
-    }, {
-      "mode": "100644",
-      "hash": "d40351e21140bb3af8630f699a85639a564558a3",
-      "size": 6712,
-      "path": "RELEASING_RAILS.rdoc"
-    }, {
-      "mode": "100644",
-      "hash": "0737afd089fe7c1a2256b6e33d1239d9ed78bb78",
-      "size": 1978,
-      "path": "Rakefile"
-    }, {
-      "mode": "100644",
-      "hash": "b7967accabba6b37d1af337179e8e304d3324140",
-      "size": 20,
-      "path": "asd.dsa"
-    }, {
-      "mode": "100644",
-      "hash": "bff8fee9348fca56c9d7e557cea824a939c99b39",
-      "size": 524,
-      "path": "install.rb"
-    }, {
-      "mode": "100644",
-      "hash": "0ad8fcfeda7fc44f99d28dd7c986820f6b85dab4",
-      "size": 51,
-      "path": "load_paths.rb"
-    }, {
-      "mode": "100644",
-      "hash": "3d4db092fd0fd1d1123323e66b47ac05e775cae3",
-      "size": 7,
-      "path": "new_file.txt"
-    }, {
-      "mode": "100644",
-      "hash": "4800df0df40e95ea3675b489c9bb6d8de2c3f93a",
-      "size": 1157,
-      "path": "rails.gemspec"
-    }, {
-      "mode": "100644",
-      "hash": "ca6b77fde1d02acc38836a687449374690da61df",
-      "size": 2260,
-      "path": "rev-list.txt"
-    }, {
-      "mode": "100644",
-      "hash": "c7397c4f15c90a84f0e56e25d7a79294c84c70e6",
-      "size": 308,
-      "path": "version.rb"
-    }
-  ],
-  "folders": [
-    {
-      "mode": "040000",
-      "hash": "6003a3fe411e6edf6bc1f3e8ad85e3e5802ca893",
-      "size": "-",
-      "path": "actionmailer"
-    }, {
-      "mode": "040000",
-      "hash": "46aa09b6349846238f2d05ab61aa32e4e4b9f47b",
-      "size": "-",
-      "path": "actionpack"
-    }, {
-      "mode": "040000",
-      "hash": "9885fe7f30410ea3179e4337ed39b71d5ed5af9d",
-      "size": "-",
-      "path": "actionview"
-    }, {
-      "mode": "040000",
-      "hash": "8616adeba12cd07b58aef27be880980ed0fb04ea",
-      "size": "-",
-      "path": "activemodel"
-    }, {
-      "mode": "040000",
-      "hash": "47c0d1161d78833f8873345410586db807cd99a6",
-      "size": "-",
-      "path": "activerecord"
-    }, {
-      "mode": "040000",
-      "hash": "462d21acc13e7d75aafcf8442ba13871704e03a0",
-      "size": "-",
-      "path": "activesupport"
-    }, {
-      "mode": "040000",
-      "hash": "c6e5aadb0c5a07ba0ed21c759482e240d3c87c3c",
-      "size": "-",
-      "path": "ci"
-    }, {
-      "mode": "040000",
-      "hash": "0d38faebe2510ad530a925d644dcd9ee9e9f30cd",
-      "size": "-",
-      "path": "guides"
-    }, {
-      "mode": "040000",
-      "hash": "3f9d893a59eb7bec466fc0450cf434442ef776ba",
-      "size": "-",
-      "path": "railties"
-    }, {
-      "mode": "040000",
-      "hash": "d1316d9a6925505504e65958d6a170d151c23be8",
-      "size": "-",
-      "path": "tasks"
-    }, {
-      "mode": "040000",
-      "hash": "2dc00deb219bfdeb2557ae27d54f875d86aa8096",
-      "size": "-",
-      "path": "tools"
-    }
-  ],
-  "submodules": [
-    {
-      "mode": "160000",
-      "hash": "c67be4624545b4263184c4a0e8f887efd0a66320",
-      "size": "-",
-      "path": "rack"
-    }
-  ]
-}
+[
+  {
+    "type": "blob",
+    "mode": "100644",
+    "hash": "6a2065dbc05686e657931095880ef1773d953b46",
+    "size": 110,
+    "path": ".gitmodules"
+  },
+  {
+    "type": "blob",
+    "mode": "100644",
+    "hash": "bf7e89904eab609d4eb30d8176e2d23ab161531c",
+    "size": 7,
+    "path": "sample-file.txt"
+  },
+  {
+    "type": "tree",
+    "mode": "040000",
+    "hash": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+    "size": "-",
+    "path": "sample-folder"
+  },
+  {
+    "type": "commit",
+    "mode": "160000",
+    "hash": "10054733bf311044fb68aec24fe2fac6b21bde36",
+    "size": "-",
+    "path": "sample-submodule"
+  },
+  {
+    "type": "blob",
+    "mode": "120000",
+    "hash": "bd27487f5140480eaed9eeba91554f9c1496ce29",
+    "size": 54,
+    "path": "sample-symlink.md"
+  }
+]
