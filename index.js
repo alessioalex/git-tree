@@ -9,7 +9,7 @@ function listTree(repoPath, ops) {
   var args = ['ls-tree', '-z', '-l'];
 
   if (opts.recursive) { args.push('-r'); }
-  args.push((opts.rev || 'HEAD'), '--', (opts.path || ''));
+  args.push((opts.rev || 'HEAD'), '--', (opts.path || '.'));
 
   return streamingParser(gitSpawnedStream(repoPath, args));
 }
